@@ -28,8 +28,9 @@
 ## 使用步骤
 ### 数据处理
 1. 下载对话脚本到/data/raw目录下;
-2. 然后使用/data/script/raw2alpaca.py（需进行部分修改）进行处理，输出结果为output.json;
-3. 继续使用alpaca2qa.py进行处理，需要注意的是记得修改prompt。
+2. 然后使用/data/script/raw2alpaca.py（需进行部分修改）进行处理，输出结果为`output.json`;
+3. 继续使用alpaca2qa.py进行处理，需要注意的是记得修改prompt；
+4. 将输出结果`finetune_train_examples.json`移动到`/data/`目录下。
 
 ### 微调训练
 参照[chatglm_finetuning](https://github.com/ssbuild/chatglm_finetuning) repo提供的步骤。
