@@ -4,6 +4,8 @@
 
 ## 模型效果
 
+训练结果可在[huggingface](https://huggingface.co/Pcdack/chat_zhenhuan)下载。
+
 在数据集中的数据已经得到记忆
 
 ```
