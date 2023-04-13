@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
 
     if deep_config is None:
-        train_weight = './best_ckpt/last-v3.ckpt'
+        train_weight = './best_ckpt/last-v1.ckpt'
         assert os.path.exists(train_weight)
         pl_model = MyTransformer.load_from_checkpoint(train_weight, config=config,model_args=model_args,
                                                    training_args=training_args,strict=False)
@@ -71,12 +71,7 @@ if __name__ == '__main__':
 
 
     #注意 长度不等于2048 会影响效果
-    response, history = model.chat(tokenizer, "写一个诗歌，关于冬天", history=[],max_length=2048,
+    response, history = model.chat(tokenizer, "你是谁?", history=[],max_length=2048,
                                         eos_token_id=config.eos_token_id,
                                         do_sample=True, top_p=0.7, temperature=0.95,)
-    print('写一个诗歌，关于冬天',' ',response)
-
-    response, history = model.chat(tokenizer, "晚上睡不着应该怎么办", history=[],max_length=2048,
-                                        eos_token_id=config.eos_token_id,
-                                        do_sample=True, top_p=0.7, temperature=0.95,)
-    print('晚上睡不着应该怎么办',' ',response)
+    print('你是谁?',' ',response)
